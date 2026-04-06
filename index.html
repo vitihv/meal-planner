@@ -2,8 +2,30 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>Planificador de Comidas</title>
+<meta name="description" content="Planificador de comidas familiar semanal">
+<meta name="theme-color" content="#2a2520">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Mesa">
+<link rel="manifest" href="data:application/json,{
+  %22name%22:%22Mesa+Familiar%22,
+  %22short_name%22:%22Mesa%22,
+  %22description%22:%22Planificador+de+comidas+familiar%22,
+  %22start_url%22:%22.%22,
+  %22display%22:%22standalone%22,
+  %22background_color%22:%22%23f5f0e8%22,
+  %22theme_color%22:%22%232a2520%22,
+  %22orientation%22:%22portrait%22,
+  %22icons%22:[{
+    %22src%22:%22data:image/svg+xml,%3Csvg+xmlns='http://www.w3.org/2000/svg'+viewBox='0+0+512+512'%3E%3Crect+width='512'+height='512'+fill='%232a2520'/%3E%3Ctext+x='256'+y='330'+font-size='260'+text-anchor='middle'+fill='%23c4622d'+font-family='serif'%3E%F0%9F%8D%BD%3C/text%3E%3C/svg%3E%22,
+    %22sizes%22:%22512x512%22,
+    %22type%22:%22image/svg+xml%22,
+    %22purpose%22:%22any+maskable%22
+  }]
+}">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,600;1,300&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
   :root {
@@ -31,6 +53,8 @@
     color: var(--text);
     min-height: 100vh;
     font-size: 14px;
+    padding-top: env(safe-area-inset-top);
+    padding-bottom: env(safe-area-inset-bottom);
   }
 
   /* HEADER */
